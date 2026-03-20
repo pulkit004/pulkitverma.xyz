@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulkit Verma Portfolio Mock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark">PV/26</span>
+          <div>
+            <p class="eyebrow">Pulkit Verma</p>
+            <p class="subtle">AI Engineer, frontend-minded systems builder</p>
+          </div>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation menu"
+        >
+          <span>Menu</span>
+        </button>
+        <nav class="topnav">
+          <a href="#work">Work</a>
+          <a href="#notes">Technical Notes</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu" hidden>
+          <div class="mobile-menu-panel">
+            <div class="mobile-menu-head">
+              <p class="section-label">Navigate</p>
+              <button class="menu-close" type="button" aria-label="Close navigation menu">
+                Close
+              </button>
+            </div>
+            <nav class="mobile-menu-links" aria-label="Mobile navigation">
+              <a href="#work">Work</a>
+              <a href="#notes">Technical Notes</a>
+              <a href="#philosophy">Philosophy</a>
+              <a href="#resume">Resume</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="hero-grid" id="main-content">
+        <section class="hero-card hero-main">
+          <p class="section-label">Selected portfolio / 2026</p>
+          <h1>
+            Building deterministic AI systems
+            <span>with a frontend eye for clarity.</span>
+          </h1>
+          <p class="hero-copy">
+            I work on agentic workflows, productized AI systems, and polished
+            interfaces that make complex software feel inevitable.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">See selected work</a>
+            <a class="button button-light" href="#notes">Read technical notes</a>
+          </div>
+          <div class="proof-strip">
+            <div class="proof-item">
+              <span class="proof-label">Current</span>
+              <strong>Scaling AI at Setu</strong>
+            </div>
+            <div class="proof-item">
+              <span class="proof-label">Building</span>
+              <strong>Products, tooling, and notes</strong>
+            </div>
+            <div class="proof-item">
+              <span class="proof-label">Focus</span>
+              <strong>Reliable agentic systems</strong>
+            </div>
+          </div>
+        </section>
+
+        <aside class="hero-card hero-notes">
+          <p class="section-label">Quick profile</p>
+          <h2 class="hero-notes-title">What I do, where I fit best, and where to reach me.</h2>
+          <div class="signal-list">
+            <div class="signal-row">
+              <span>Based in</span>
+              <strong>Jaipur, India</strong>
+            </div>
+            <div class="signal-row">
+              <span>Current role</span>
+              <strong>Scaling AI systems at Setu</strong>
+            </div>
+            <div class="signal-row">
+              <span>Best for</span>
+              <strong>0 to 1 AI products, frontend clarity, system design</strong>
+            </div>
+          </div>
+          <div class="mini-links">
+            <a href="#resume">Resume</a>
+            <a href="https://github.com/pulkit004" target="_blank" rel="noreferrer">
+              GitHub <span class="external-mark">External</span>
+            </a>
+            <a href="https://www.linkedin.com/in/pulkitv/" target="_blank" rel="noreferrer">
+              LinkedIn <span class="external-mark">External</span>
+            </a>
+          </div>
+        </aside>
+
+        <section class="hero-card manifesto" id="philosophy">
+          <p class="section-label">Principles</p>
+          <div class="manifesto-lines">
+            <p>Determinism &gt; randomness</p>
+            <p>Agentic SDLC, not AI theater</p>
+            <p>Zero-hallucination is a systems problem</p>
+          </div>
+        </section>
+
+        <section class="hero-card capabilities">
+          <p class="section-label">What you can pull me in for</p>
+          <div class="capability-row">
+            <span>01</span>
+            <div>
+              <strong>AI product systems</strong>
+              <p>Workflow design, orchestration, eval loops, and shipping paths.</p>
+            </div>
+          </div>
+          <div class="capability-row">
+            <span>02</span>
+            <div>
+              <strong>Frontend for technical products</strong>
+              <p>Interfaces that reduce cognitive load while still feeling sharp.</p>
+            </div>
+          </div>
+          <div class="capability-row">
+            <span>03</span>
+            <div>
+              <strong>Engineering leverage</strong>
+              <p>Review automation, internal tooling, and systems that scale teams.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="work-section" id="work">
+        <div class="section-header">
+          <p class="section-label">Featured builds</p>
+          <p class="section-meta">Projects, products, and engineering systems</p>
+        </div>
+        <p class="section-intro">
+          The best entry point is a mix of shipped product, internal leverage, and
+          infrastructure thinking. These cards should make that legible in under a minute.
+        </p>
+
+        <div class="project-grid">
+          <article class="project-card large">
+            <div class="card-topline">
+              <span>01</span>
+              <span>AI systems / product</span>
+            </div>
+            <h2>weaveai.dev</h2>
+            <p>
+              Production-oriented AI agents and RAG systems designed for teams
+              that need reliability, not demos.
+            </p>
+            <div class="tag-row">
+              <span>Role: builder</span>
+              <span>Focus: reliability</span>
+            </div>
+            <div class="tag-row">
+              <span>Agentic workflows</span>
+              <span>RAG</span>
+              <span>Production UX</span>
+            </div>
+            <a class="project-link" href="https://weaveai.dev" target="_blank" rel="noreferrer">
+              View case study <span class="external-mark">External</span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="card-topline">
+              <span>02</span>
+              <span>Tooling / browser UX</span>
+            </div>
+            <h2>trufeed.app</h2>
+            <p>
+              Visual feedback capture with browser context, built to reduce the
+              drag between finding issues and shipping fixes.
+            </p>
+            <div class="tag-row">
+              <span>Browser UX</span>
+              <span>Feedback loop</span>
+            </div>
+            <a class="project-link" href="https://trufeed.app" target="_blank" rel="noreferrer">
+              Open project <span class="external-mark">External</span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="card-topline">
+              <span>03</span>
+              <span>Developer tooling</span>
+            </div>
+            <h2>Review Agent</h2>
+            <p>
+              Autonomous code review against team principles, pushing AI into
+              the quality loop of the SDLC.
+            </p>
+            <div class="tag-row">
+              <span>Code quality</span>
+              <span>Automation</span>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/pulkit004/mr-principle-review-agent"
+              target="_blank"
+              rel="noreferrer"
+            >
+              See details <span class="external-mark">External</span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <div class="card-topline">
+              <span>04</span>
+              <span>SEO / content infra</span>
+            </div>
+            <h2>seo-engine</h2>
+            <p>
+              I/O-agnostic SEO content engine that discovers keywords, scores
+              them with an LLM, and generates publish-ready blogs through
+              pluggable adapters.
+            </p>
+            <div class="tag-row">
+              <span>TypeScript</span>
+              <span>LLM adapters</span>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/pulkit004/seo-engine"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open repo <span class="external-mark">External</span>
+            </a>
+          </article>
+
+          <article class="project-card accent">
+            <div class="card-topline">
+              <span>05</span>
+              <span>Architecture / infra</span>
+            </div>
+            <h2>RAG Foundation</h2>
+            <p>
+              Retrieval-first architecture work aimed at reducing hallucination
+              through system design, not prompt tricks.
+            </p>
+            <div class="tag-row">
+              <span>Architecture</span>
+              <span>Retrieval</span>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/pulkit004/rag-foundation-stone"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read framework <span class="external-mark">External</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="quote-band">
+        <p>
+          “The interesting work isn’t making AI talk. It’s making AI behave.”
+        </p>
+      </section>
+
+      <section class="notes-section" id="notes">
+        <div class="section-header">
+          <p class="section-label">Technical notes</p>
+          <p class="section-meta">Short writing on systems, frontend clarity, and AI behavior</p>
+        </div>
+        <p class="section-intro">
+          This should feel like a working notebook, not a generic blog. Fast to scan,
+          opinionated, and worth bookmarking.
+        </p>
+
+        <div class="notes-grid">
+          <article class="note-card feature">
+            <div class="card-topline">
+              <span>Note 01</span>
+              <span>Agent design</span>
+            </div>
+            <h3>Deterministic agents need explicit state, not better vibes</h3>
+            <p>
+              A piece on why most agent failures are orchestration failures:
+              weak state boundaries, vague retries, and invisible handoffs.
+            </p>
+            <div class="tag-row">
+              <span>Systems design</span>
+              <span>State management</span>
+            </div>
+            <a class="note-link" href="./notes/deterministic-agents.html">Read note</a>
+          </article>
+
+          <div class="notes-rail">
+            <article class="note-card compact">
+              <div class="card-topline">
+                <span>Note 02</span>
+                <span>Frontend systems</span>
+              </div>
+              <h3>Interfaces for complex products should feel calm, not clever</h3>
+              <p>
+                Notes on using editorial hierarchy and restraint in technical interfaces.
+              </p>
+              <a class="note-link" href="./notes/calm-interfaces.html">Read note</a>
+            </article>
+
+            <article class="note-card compact">
+              <div class="card-topline">
+                <span>Note 03</span>
+                <span>RAG</span>
+              </div>
+              <h3>Zero-hallucination is an infrastructure stance</h3>
+              <p>
+                Retrieval quality, chunking, and evaluation loops matter more than prompt folklore.
+              </p>
+              <a class="note-link" href="./notes/zero-hallucination.html">Read note</a>
+            </article>
+
+            <article class="note-card browse-card">
+              <p class="section-label">Browse archive</p>
+              <h3>Technical notes, field essays, and build breakdowns</h3>
+              <p>
+                A full notes index can become the long-tail trust layer of the site.
+              </p>
+              <a class="note-link" href="./notes/index.html">View all notes</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-contact" id="resume">
+        <div class="resume-panel">
+          <p class="section-label">Resume snapshot</p>
+          <h3>Frontend engineer with strong AI systems range</h3>
+          <p>
+            The site can frame you as a systems builder first, while the resume
+            can sharpen the frontend engineering story for hiring and outbound.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="./assets/Pulkit_FE_Engg_2025.pdf" target="_blank" rel="noreferrer">
+              Open PDF resume
+            </a>
+            <a
+              class="button button-light"
+              href="mailto:pulkitverma004@gmail.com?subject=Portfolio%20inquiry%20from%20pulkitverma.xyz"
+            >
+              Start a conversation
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-panel" id="contact">
+          <p class="section-label">Let’s build</p>
+          <a href="mailto:pulkitverma004@gmail.com?subject=Portfolio%20inquiry%20from%20pulkitverma.xyz">
+            pulkitverma004@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/pulkitv/" target="_blank" rel="noreferrer">
+            LinkedIn <span class="external-mark">External</span>
+          </a>
+          <a href="https://github.com/pulkit004" target="_blank" rel="noreferrer">
+            GitHub <span class="external-mark">External</span>
+          </a>
+        </div>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

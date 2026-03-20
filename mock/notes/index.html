@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Notes - Pulkit Verma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="page-shell note-page-shell">
+      <header class="topbar note-topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark">PV/26</span>
+          <div>
+            <p class="eyebrow">Technical Notes</p>
+            <p class="subtle">Working notebook on systems, AI behavior, and frontend clarity</p>
+          </div>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation menu"
+        >
+          <span>Menu</span>
+        </button>
+        <nav class="topnav">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#work">Work</a>
+          <a href="../index.html#resume">Resume</a>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu" hidden>
+          <div class="mobile-menu-panel">
+            <div class="mobile-menu-head">
+              <p class="section-label">Navigate</p>
+              <button class="menu-close" type="button" aria-label="Close navigation menu">
+                Close
+              </button>
+            </div>
+            <nav class="mobile-menu-links" aria-label="Mobile navigation">
+              <a href="../index.html">Home</a>
+              <a href="../index.html#work">Work</a>
+              <a href="../index.html#resume">Resume</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="note-index-grid" id="main-content">
+        <section class="hero-card note-index-intro">
+          <p class="section-label">Notes archive</p>
+          <h1>Technical notes, field essays, and build breakdowns</h1>
+          <p class="hero-copy">
+            This is the future publishing surface for pulkitverma.xyz: opinionated,
+            skimmable, and grounded in real product and engineering work.
+          </p>
+        </section>
+
+        <article class="note-card feature">
+          <div class="card-topline">
+            <span>Note 01</span>
+            <span>Agent design</span>
+          </div>
+          <h3>Deterministic agents need explicit state, not better vibes</h3>
+          <p>Why orchestration discipline beats prompt polish when systems start failing in production.</p>
+          <a class="note-link" href="./deterministic-agents.html">Read note</a>
+        </article>
+
+        <article class="note-card compact">
+          <div class="card-topline">
+            <span>Note 02</span>
+            <span>Frontend systems</span>
+          </div>
+          <h3>Interfaces for complex products should feel calm, not clever</h3>
+          <p>Using editorial hierarchy to make technical surfaces easier to trust.</p>
+          <a class="note-link" href="./calm-interfaces.html">Read note</a>
+        </article>
+
+        <article class="note-card compact">
+          <div class="card-topline">
+            <span>Note 03</span>
+            <span>RAG</span>
+          </div>
+          <h3>Zero-hallucination is an infrastructure stance</h3>
+          <p>Retrieval quality, evaluation loops, and system boundaries matter more than prompt folklore.</p>
+          <a class="note-link" href="./zero-hallucination.html">Read note</a>
+        </article>
+      </main>
+    </div>
+    <script src="../app.js"></script>
+  </body>
+</html>
