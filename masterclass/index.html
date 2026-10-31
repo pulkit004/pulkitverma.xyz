@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="You use ChatGPT every day. Now build like an AI Engineer. 3 hands-on hours in Jaipur, Sat 21 Nov. Build a RAG app and an AI agent. ₹999, 10 seats.">
+<meta property="og:title" content="AI Masterclass, Jaipur | Pulkit Verma">
+<meta property="og:description" content="Build a RAG app and an AI agent in 3 hands-on hours. Sat 21 Nov, Jaipur. ₹999.">
+<meta property="og:type" content="website">
+<!-- Meta Pixel: paste your Pixel base code here, and fbq('track','Contact') fires on WhatsApp taps below -->
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>AI Masterclass, Jaipur | Pulkit Verma</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* WeaveAI Ads system: paper ground with a faint 40px grid, ink headlines, one signal highlight, brand blue for numbers, pill buttons, one dark card. Layout: single column; timeline drawn to scale (180 min). */
+:root{
+  --ground:#F7F6F2; --grid-line:rgba(10,10,10,0.018);
+  --ink:#0A0A0A; --body:#3A3A3A; --muted:#5C5C5C;
+  --brand-blue:#3B49F5; --brand-blue-tint:rgba(59,73,245,0.12);
+  --signal:#EBF212; --signal-ink:#0A0A0A;
+  --card-ink:#0A0A0A; --card-line:#2A2A2A; --card-text:#FFFFFF; --card-body:#D9D9D9; --card-muted:#A3A3A3; --card-blue:#7C9BFF;
+  --tile-ink:#161616; --tile-fg:#F7F6F2;
+  --hairline:#DAD8CF; --surface:#FFFFFF;
+  --cta-fill:#0A0A0A; --cta-text:#FFFFFF;
+  --seg-b1:#3B49F5; --seg-b1-t:#FFFFFF; --seg-b2:#0A0A0A; --seg-b2-t:#FFFFFF; --seg-b3:#EBF212; --seg-b3-t:#0A0A0A;
+  --shadow-card:0 22px 44px rgba(10,10,10,0.22);
+  --radius-sm:6px; --radius-md:8px; --radius-tile:12px; --radius-lg:22px; --radius-pill:999px;
+  --font-sans:"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0A0A0A; --grid-line:rgba(255,255,255,0.016);
+    --ink:#FFFFFF; --body:#C7C7C7; --muted:#A3A3A3;
+    --brand-blue:#7C9BFF; --brand-blue-tint:rgba(124,155,255,0.16);
+    --card-ink:#161616;
+    --hairline:#2A2A2A; --surface:#161616;
+    --cta-fill:#EBF212; --cta-text:#0A0A0A;
+    --seg-b1:#7C9BFF; --seg-b1-t:#0A0A0A; --seg-b2:#FFFFFF; --seg-b2-t:#0A0A0A;
+    --shadow-card:none;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0A0A0A; --grid-line:rgba(255,255,255,0.016);
+  --ink:#FFFFFF; --body:#C7C7C7; --muted:#A3A3A3;
+  --brand-blue:#7C9BFF; --brand-blue-tint:rgba(124,155,255,0.16);
+  --card-ink:#161616;
+  --hairline:#2A2A2A; --surface:#161616;
+  --cta-fill:#EBF212; --cta-text:#0A0A0A;
+  --seg-b1:#7C9BFF; --seg-b1-t:#0A0A0A; --seg-b2:#FFFFFF; --seg-b2-t:#0A0A0A;
+  --shadow-card:none;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; color:var(--ink); font-family:var(--font-sans); font-size:17px; line-height:1.6; font-weight:500;
+  background-color:var(--ground);
+  background-image:linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size:40px 40px;
+  padding-block:0 104px;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap{max-width:720px; margin:0 auto}
+h1,h2,h3{font-weight:800; letter-spacing:-0.035em; line-height:1.15; margin:0; text-wrap:balance}
+p{margin:0; color:var(--body)}
+b{color:var(--ink); font-weight:800}
+code{font-family:var(--font-mono); font-size:.88em; background:var(--brand-blue-tint); color:var(--ink); padding:1px 6px; border-radius:var(--radius-sm); white-space:nowrap}
+.mono{font-family:var(--font-mono); font-size:13px; letter-spacing:.04em; font-weight:500}
+.eyebrow{font-family:var(--font-mono); font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); line-height:1.4}
+.i{width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; flex:none}
+
+.top{display:flex; justify-content:space-between; align-items:center; gap:8px 12px; flex-wrap:wrap; padding-block:18px; border-bottom:1px solid var(--hairline)}
+.brand{font-weight:800; letter-spacing:-0.02em; font-size:20px; line-height:1.2}
+
+/* hero */
+.hero{padding-block:44px 40px; display:grid; gap:24px}
+h1{font-size:clamp(34px, 8.2vw, 58px); line-height:1.12}
+h1 .l1{display:block; margin-bottom:.12em}
+h1 .sig{
+  display:inline; color:var(--signal-ink); padding:.02em .18em; border-radius:var(--radius-md);
+  background:linear-gradient(var(--signal), var(--signal)) no-repeat left center / 100% 100%;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;
+  line-height:1.3;
+}
+.lede{font-size:19px; line-height:1.6; max-width:34em}
+.facts{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); border-top:1px solid var(--hairline); border-left:1px solid var(--hairline); background:var(--surface)}
+.facts div{padding:16px 14px; border-right:1px solid var(--hairline); border-bottom:1px solid var(--hairline); display:grid; gap:4px; align-content:start; transition:background .2s}
+.facts div:hover{background:var(--ground)}
+.facts .i{font-size:22px; color:var(--brand-blue); margin-bottom:4px; transition:transform .25s}
+.facts div:hover .i{transform:translateY(-2px) scale(1.08)}
+.facts b{font-size:24px; letter-spacing:-0.04em; line-height:1.15}
+.facts span{font-size:14px; line-height:1.4; color:var(--muted); font-weight:600}
+@media (min-width:560px){ .facts{grid-template-columns:repeat(4, minmax(0,1fr))} }
+
+.cta{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:54px; padding:0 24px;
+  background:var(--cta-fill); color:var(--cta-text); font-family:var(--font-sans); font-weight:800; font-size:17px; line-height:1.2;
+  text-decoration:none; border-radius:var(--radius-pill); border:0;
+  transition:filter .15s, transform .15s;
+}
+.cta .i{font-size:20px}
+.cta .arr{transition:transform .2s}
+.cta:hover{filter:brightness(1.12)}
+.cta:hover .arr{transform:translateX(4px)}
+.cta:active{transform:scale(.98)}
+.cta:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--brand-blue); outline-offset:3px}
+.hero .cta{justify-self:start}
+.small{font-size:14px; line-height:1.5; color:var(--muted); font-weight:600}
+
+/* sections */
+section{padding-block:48px; border-top:1px solid var(--hairline)}
+section > h2{font-size:clamp(28px, 6vw, 38px); margin-bottom:24px}
+.stakes{display:grid; gap:20px}
+.stakes > h2{margin-bottom:4px}
+.stakes p{font-size:18px; line-height:1.6; max-width:34em}
+.stakes .row{display:grid; grid-template-columns:44px minmax(0,1fr); gap:16px; align-items:start}
+.tile{width:44px; height:44px; display:grid; place-items:center; border-radius:var(--radius-tile); background:var(--tile-ink); color:var(--tile-fg); font-size:22px; transition:transform .25s}
+.row:hover .tile, .block:hover .tile{transform:translateY(-2px) rotate(-4deg)}
+
+/* cards: who it's for, what to bring */
+.who{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px}
+@media (max-width:520px){ .who{grid-template-columns:minmax(0,1fr)} }
+.who .card{background:var(--surface); border:1px solid var(--hairline); border-radius:var(--radius-tile); padding:18px; display:grid; gap:8px; align-content:start; transition:transform .2s, border-color .2s}
+.who .card:hover{transform:translateY(-2px); border-color:var(--brand-blue)}
+.who .card .i{font-size:24px; color:var(--brand-blue)}
+.who .card h3{font-size:19px; line-height:1.25; letter-spacing:-0.02em}
+.who .card p{font-size:15px; line-height:1.5}
+.notfor{margin-top:18px; padding:16px 18px; border:1px dashed var(--hairline); border-radius:var(--radius-tile); font-size:15px; line-height:1.55}
+.notfor b{display:block; margin-bottom:4px}
+
+/* timeline to scale */
+.bar{display:flex; height:46px; width:100%; margin:0 0 10px; border-radius:var(--radius-md); overflow:hidden; gap:2px}
+.seg{display:flex; align-items:center; justify-content:center; min-width:0; font-family:var(--font-mono); font-size:11px; font-weight:700; transform-origin:left center}
+.seg.b1{background:var(--seg-b1); color:var(--seg-b1-t)}
+.seg.b2{background:var(--seg-b2); color:var(--seg-b2-t)}
+.seg.b3{background:var(--seg-b3); color:var(--seg-b3-t)}
+.seg.brk{background:var(--hairline); color:var(--muted)}
+.seg.end{background:transparent; color:var(--muted); box-shadow:inset 0 0 0 1px var(--hairline)}
+.scale{display:flex; justify-content:space-between; color:var(--muted)}
+
+.blocks{margin-top:28px}
+.block{display:grid; grid-template-columns:56px minmax(0,1fr); gap:16px; padding-block:26px; border-top:1px solid var(--hairline)}
+.block:first-child{border-top:0; padding-top:8px}
+.block .t{color:var(--muted); padding-top:10px}
+.block h3{font-size:clamp(22px, 5vw, 26px); line-height:1.2; margin-bottom:12px; display:flex; align-items:center; gap:12px}
+.block h3 .tile{width:40px; height:40px; font-size:20px}
+.block .out{font-weight:700; color:var(--ink); line-height:1.5; margin-bottom:14px}
+.block ul{margin:0; padding:0; list-style:none; display:grid; gap:10px}
+.block li{position:relative; padding-left:28px; line-height:1.5; color:var(--body)}
+.block li > .i{position:absolute; left:0; top:.25em; color:var(--brand-blue); font-size:16px}
+.block li b{white-space:nowrap}
+.gap{display:grid; grid-template-columns:56px minmax(0,1fr); gap:16px; padding-block:14px; border-top:1px dashed var(--hairline); color:var(--muted); font-size:15px; font-weight:600; line-height:1.4}
+.gap span:last-child{display:flex; align-items:center; gap:8px}
+
+/* about: the one dark card */
+.about{
+  background:var(--card-ink); color:var(--card-text); border:1px solid var(--card-line);
+  border-radius:var(--radius-lg); box-shadow:var(--shadow-card);
+  padding:32px 24px; display:grid; gap:20px;
+}
+.about .label{font-family:var(--font-mono); font-size:13px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--card-muted); line-height:1.3}
+.about h2{color:var(--card-text); font-size:clamp(26px, 5.6vw, 36px); line-height:1.18; margin:0}
+.about p{color:var(--card-body); font-size:17px; line-height:1.6}
+.about p b{color:var(--card-text)}
+.stats{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:12px; border-top:1px solid var(--card-line); padding-top:22px; margin-top:4px}
+.stat b{display:block; font-size:clamp(34px, 9vw, 52px); letter-spacing:-0.05em; line-height:1; color:var(--card-blue)}
+.stat span{display:block; margin-top:10px; font-size:13px; font-weight:600; line-height:1.35; color:var(--card-muted)}
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{display:inline-flex; align-items:center; gap:6px; padding:7px 12px; border-radius:var(--radius-pill); border:1px solid #3A3A3A; font-size:13px; font-weight:700; line-height:1.2; color:var(--card-text)}
+.chip .i{font-size:14px; color:var(--card-blue)}
+.chip.sig{background:var(--signal); border-color:var(--signal); color:var(--signal-ink)}
+.chip.sig .i{color:var(--signal-ink)}
+.socials{display:flex; flex-wrap:wrap; gap:10px; border-top:1px solid var(--card-line); padding-top:20px}
+.social{display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:0 16px; border-radius:var(--radius-pill); background:#FFFFFF; color:#0A0A0A; font-weight:800; font-size:15px; text-decoration:none; transition:transform .15s}
+.social .i{font-size:18px}
+.social:hover{transform:translateY(-2px)}
+.social span{font-family:var(--font-mono); font-weight:500; font-size:13px; color:#5C5C5C}
+.foot-links{display:flex; gap:16px; flex-wrap:wrap; margin-top:6px}
+.foot-links a{color:var(--brand-blue); font-weight:700; text-decoration:none}
+.foot-links a:hover{text-decoration:underline}
+
+/* price */
+.price{display:grid; gap:20px}
+.price .amt{font-weight:800; font-size:clamp(56px, 14vw, 96px); line-height:1; letter-spacing:-0.05em; color:var(--brand-blue)}
+.price ul{margin:0; padding:0; list-style:none; display:grid; gap:12px}
+.price li{position:relative; padding-left:32px; line-height:1.5; color:var(--body)}
+.price li > .i{position:absolute; left:0; top:.1em; color:var(--brand-blue); font-size:20px}
+.price .cta{justify-self:start}
+
+details{border-top:1px solid var(--hairline); padding-block:16px}
+details:last-of-type{border-bottom:1px solid var(--hairline)}
+summary{cursor:pointer; font-weight:800; letter-spacing:-0.01em; line-height:1.4; list-style:none; display:flex; justify-content:space-between; gap:12px; align-items:center}
+summary::-webkit-details-marker{display:none}
+summary .i{color:var(--muted); font-size:18px; transition:transform .25s}
+details[open] summary .i{transform:rotate(45deg); color:var(--brand-blue)}
+details p{margin-top:10px; line-height:1.6}
+details[open] p{animation:fadeUp .3s ease both}
+
+footer{padding-block:28px; color:var(--muted); font-size:14px; font-weight:600}
+
+.dock{
+  position:fixed; left:0; right:0; bottom:0; z-index:5;
+  background:var(--ground); border-top:1px solid var(--hairline);
+  padding-top:10px;
+  padding-bottom:calc(10px + env(safe-area-inset-bottom, 0px));
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+.dock .in{max-width:720px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px}
+.dock .p{display:grid; gap:2px}
+.dock .p b{font-size:24px; letter-spacing:-0.04em; line-height:1.1; color:var(--brand-blue)}
+.dock .p span{font-size:13px; line-height:1.3; color:var(--muted); font-weight:600}
+.dock .cta{min-height:46px; padding:0 18px; font-size:16px; white-space:nowrap}
+
+/* motion: everything rests fully visible */
+@keyframes fadeUp{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:none}}
+@keyframes grow{from{transform:scaleX(0)} to{transform:scaleX(1)}}
+@keyframes sweep{from{background-size:0% 100%} to{background-size:100% 100%}}
+@keyframes ring{0%{box-shadow:0 0 0 0 color-mix(in srgb, var(--brand-blue) 55%, transparent)} 100%{box-shadow:0 0 0 12px transparent}}
+@media (prefers-reduced-motion:no-preference){
+  .hero > *{animation:fadeUp .55s ease both}
+  .hero > *:nth-child(2){animation-delay:.05s}
+  .hero > *:nth-child(3){animation-delay:.12s}
+  .hero > *:nth-child(4){animation-delay:.19s}
+  .hero > *:nth-child(5){animation-delay:.26s}
+  h1 .sig{animation:sweep .7s cubic-bezier(.2,.7,.2,1) .35s both}
+  .seg{animation:grow .6s cubic-bezier(.2,.7,.2,1) both}
+  .seg:nth-child(2){animation-delay:.08s} .seg:nth-child(3){animation-delay:.16s}
+  .seg:nth-child(4){animation-delay:.24s} .seg:nth-child(5){animation-delay:.32s} .seg:nth-child(6){animation-delay:.4s}
+  .dock .cta{animation:ring 1.8s ease-out 1.2s 3}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important; animation:none !important}
+}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-rupee" viewBox="0 0 24 24"><path d="M6 4h12M6 9h12M10 4a5 5 0 0 1 0 10H6l8 7"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 17h6"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 9l3 3-3 3M12 15h6"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="11" rx="2"/><path d="M2 19h20"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2v6M15 2v6M6 8h12v4a6 6 0 0 1-12 0V8zM12 18v4"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 21 2M16 7l3 3M18.5 4.5l2 2"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <div class="top">
+    <span class="brand">Pulkit Verma</span>
+    <span class="eyebrow">Jaipur | Sat 21 Nov | 10 seats</span>
+  </div>
+
+  <header class="hero">
+    <p class="eyebrow">AI Masterclass for B.Tech students and young engineers</p>
+    <h1><span class="l1">You use ChatGPT every day.</span><span class="sig">Now build like an AI Engineer.</span></h1>
+    <p class="lede">3 hands-on hours. Walk out with a RAG app and an AI agent on your GitHub. Python basics is enough.</p>
+    <div class="facts" aria-label="Quick facts">
+      <div><svg class="i"><use href="#i-clock"/></svg><b>3 hours</b><span>3 blocks of 45 min</span></div>
+      <div><svg class="i"><use href="#i-users"/></svg><b>10 seats</b><span>small room, real help</span></div>
+      <div><svg class="i"><use href="#i-rupee"/></svg><b>₹999</b><span>one-time</span></div>
+      <div><svg class="i"><use href="#i-code"/></svg><b>You build</b><span>RAG app and an agent</span></div>
+    </div>
+    <a class="cta" data-cta href="#book"><svg class="i"><use href="#i-chat"/></svg>Reserve my seat on WhatsApp<svg class="i arr"><use href="#i-arrow"/></svg></a>
+    <p class="small">Saturday 21 November, at a premium co-working space in central Jaipur. Venue and time shared on WhatsApp.</p>
+  </header>
+
+  <section class="stakes" aria-labelledby="why">
+    <h2 id="why">Why this is worth a Saturday</h2>
+    <div class="row">
+      <span class="tile"><svg class="i"><use href="#i-briefcase"/></svg></span>
+      <p><b>Placement interviews now ask about AI.</b> How does an LLM work? What is RAG? An AI project on your resume gives you answers to show.</p>
+    </div>
+    <div class="row">
+      <span class="tile"><svg class="i"><use href="#i-terminal"/></svg></span>
+      <p><b>Teams expect you to code with AI.</b> Most companies now use <b>Claude Code</b>, Cursor or Copilot daily. Freshers who already know them start faster.</p>
+    </div>
+    <div class="row">
+      <span class="tile"><svg class="i"><use href="#i-search"/></svg></span>
+      <p><b>Tutorials stop at calling the API.</b> Here you see what happens inside: tokens, context windows, embeddings, and why models make things up.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="for">
+    <h2 id="for">Who this is for</h2>
+    <div class="who">
+      <div class="card"><svg class="i"><use href="#i-cap"/></svg><h3>B.Tech students</h3><p>2nd to 4th year, any branch: CSE, IT, ECE, EE or mechanical. You want AI skills before placements.</p></div>
+      <div class="card"><svg class="i"><use href="#i-briefcase"/></svg><h3>Young engineers</h3><p>0 to 3 years into a tech job. You want to use AI at work properly and grow faster.</p></div>
+      <div class="card"><svg class="i"><use href="#i-layers"/></svg><h3>Final-year project teams</h3><p>You want a real AI project, like RAG or an agent, and need to know where to start.</p></div>
+      <div class="card"><svg class="i"><use href="#i-trend"/></svg><h3>Self-taught developers</h3><p>You can code a little and want to move into AI engineering.</p></div>
+    </div>
+    <p class="notfor"><b>Skip this if</b>you already ship LLM apps or do ML research. This class starts from the basics.</p>
+  </section>
+
+  <section aria-labelledby="plan">
+    <h2 id="plan">How the 3 hours go</h2>
+    <div class="bar" role="img" aria-label="Timeline: three 45 minute blocks, two 15 minute breaks, 15 minute wrap-up">
+      <div class="seg b1" style="flex:45 1 0">45 min</div>
+      <div class="seg brk" style="flex:15 1 0">15</div>
+      <div class="seg b2" style="flex:45 1 0">45 min</div>
+      <div class="seg brk" style="flex:15 1 0">15</div>
+      <div class="seg b3" style="flex:45 1 0">45 min</div>
+      <div class="seg end" style="flex:15 1 0">15</div>
+    </div>
+    <div class="scale mono"><span>0:00</span><span>1:00</span><span>2:00</span><span>3:00</span></div>
+
+    <div class="blocks">
+      <article class="block">
+        <div class="t mono">0:00</div>
+        <div>
+          <h3><span class="tile"><svg class="i"><use href="#i-cpu"/></svg></span>How LLMs actually work</h3>
+          <p class="out">You will be able to explain an LLM in an interview.</p>
+          <ul>
+            <li><svg class="i"><use href="#i-check"/></svg>Tokens, next-token prediction and the context window</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Embeddings: how text becomes numbers a model can compare</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Why models hallucinate, and what temperature changes</li>
+            <li><svg class="i"><use href="#i-check"/></svg>GPT, Claude, Gemini and open models like Llama: how to pick, compared live side by side</li>
+          </ul>
+        </div>
+      </article>
+      <div class="gap"><span class="mono">0:45</span><span><svg class="i"><use href="#i-pause"/></svg>Break, 15 min</span></div>
+      <article class="block">
+        <div class="t mono">1:00</div>
+        <div>
+          <h3><span class="tile"><svg class="i"><use href="#i-terminal"/></svg></span>Prompting and AI coding tools</h3>
+          <p class="out">You will call an LLM from code and work faster with AI tools.</p>
+          <ul>
+            <li><svg class="i"><use href="#i-check"/></svg>System prompts, few-shot examples and structured JSON output</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Call an LLM API from Python in a few lines</li>
+            <li><svg class="i"><use href="#i-check"/></svg><b>Claude Code</b> and Cursor: read a codebase, debug and write tests with AI</li>
+            <li><svg class="i"><use href="#i-check"/></svg>When AI code is wrong, and how to check it</li>
+          </ul>
+        </div>
+      </article>
+      <div class="gap"><span class="mono">1:45</span><span><svg class="i"><use href="#i-pause"/></svg>Break, 15 min</span></div>
+      <article class="block">
+        <div class="t mono">2:00</div>
+        <div>
+          <h3><span class="tile"><svg class="i"><use href="#i-bot"/></svg></span>RAG, agents and the harness</h3>
+          <p class="out">You will build a chat-with-your-PDF app and see how agents work.</p>
+          <ul>
+            <li><svg class="i"><use href="#i-check"/></svg><b>RAG:</b> chunking, embeddings and vector search, then build a mini chat-with-your-PDF</li>
+            <li><svg class="i"><use href="#i-check"/></svg><b>Agents:</b> tool calling and the loop that lets an LLM take steps on its own</li>
+            <li><svg class="i"><use href="#i-check"/></svg><b>Harness:</b> the code around a model that lets it read files and run commands, as in Claude Code</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Cost, privacy and what to learn next</li>
+          </ul>
+        </div>
+      </article>
+      <div class="gap"><span class="mono">2:45</span><span><svg class="i"><use href="#i-flag"/></svg>Your questions, project ideas and a 30-day roadmap, 15 min</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="who" style="border-top:0; padding-top:8px">
+    <div class="about">
+      <span class="label">About your teacher</span>
+      <h2 id="who">I'm Pulkit. 10+ years building software, now leading AI work.</h2>
+      <p>I'm the <b>founder of WeaveAI</b>, a studio that builds agents and RAG systems businesses use in production. I'm also an <b>Engineering Manager</b> leading a team of 8 on AI projects. I'm also doing an <b>M.S. in Data Science from the University of Pittsburgh, USA</b>.</p>
+      <p>I teach what I use at work every week. Bring your doubts, including the ones you think are too basic.</p>
+      <div class="stats">
+        <div class="stat"><b>10+</b><span>years building software</span></div>
+        <div class="stat"><b>8</b><span>engineers on the team I lead</span></div>
+        <div class="stat"><b>1</b><span>AI studio I run, WeaveAI</span></div>
+      </div>
+      <div class="chips">
+        <span class="chip sig"><svg class="i"><use href="#i-layers"/></svg>Founder, WeaveAI</span>
+        <span class="chip"><svg class="i"><use href="#i-briefcase"/></svg>Engineering Manager, 10+ yrs</span>
+        <span class="chip"><svg class="i"><use href="#i-cap"/></svg>M.S. Data Science, Univ. of Pittsburgh, USA</span>
+      </div>
+      <div class="socials">
+        <a class="social" href="https://www.linkedin.com/in/pulkitv" target="_blank" rel="noopener"><svg class="i"><use href="#i-in"/></svg>LinkedIn <span>/in/pulkitv</span></a>
+        <a class="social" href="https://www.instagram.com/pulkitxai" target="_blank" rel="noopener"><svg class="i"><use href="#i-ig"/></svg>Instagram <span>@pulkitxai</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="bring">
+    <h2 id="bring">What to bring</h2>
+    <div class="who">
+      <div class="card"><svg class="i"><use href="#i-laptop"/></svg><h3>A laptop</h3><p>Needed for the hands-on parts. Any OS works.</p></div>
+      <div class="card"><svg class="i"><use href="#i-plug"/></svg><h3>Your charger</h3><p>3 hours of building drains a battery.</p></div>
+      <div class="card"><svg class="i"><use href="#i-code"/></svg><h3>A Google account</h3><p>We code in Google Colab, so there is nothing to install. Basic Python helps but is not required.</p></div>
+      <div class="card"><svg class="i"><use href="#i-key"/></svg><h3>No subscription</h3><p>You get <b>free API access to many top models</b> for the class, including GPT, Claude, Gemini and Llama.</p></div>
+    </div>
+  </section>
+
+  <section id="book" aria-labelledby="price">
+    <h2 id="price">What you get for ₹999</h2>
+    <div class="price">
+      <div class="amt">₹999</div>
+      <ul>
+        <li><svg class="i"><use href="#i-check"/></svg><b>3 hours of live, hands-on teaching</b>, 10 people per batch</li>
+        <li><svg class="i"><use href="#i-check"/></svg><b>The code you build</b>: your RAG app and agent notebooks, to keep and extend</li>
+        <li><svg class="i"><use href="#i-check"/></svg><b>AI handbook PDF</b>: key concepts, prompts, a tool list, interview questions and a 30-day roadmap</li>
+        <li><svg class="i"><use href="#i-check"/></svg><b>Certificate of completion</b>, to add to LinkedIn and your resume</li>
+        <li><svg class="i"><use href="#i-check"/></svg><b>Free API access to many AI models</b> for the class, no subscription needed</li>
+      </ul>
+      <a class="cta" data-cta href="#book"><svg class="i"><use href="#i-chat"/></svg>Reserve my seat on WhatsApp<svg class="i arr"><use href="#i-arrow"/></svg></a>
+      <p class="small">Message on WhatsApp for the venue, time and booking details.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="faq">
+    <h2 id="faq">Questions people ask</h2>
+    <details><summary>Do I need to know machine learning?<svg class="i"><use href="#i-plus"/></svg></summary><p>No. You don't need any ML or maths background. Python basics is enough.</p></details>
+    <details><summary>I already use ChatGPT. Will I learn anything?<svg class="i"><use href="#i-plus"/></svg></summary><p>Probably, yes. You will see how it works inside, call models from code, and build RAG and an agent.</p></details>
+    <details><summary>Will this help with placements?<svg class="i"><use href="#i-plus"/></svg></summary><p>It should. You can explain LLMs, RAG and agents, you have code to start a project, and the handbook lists common interview questions.</p></details>
+    <details><summary>Which tools will we use?<svg class="i"><use href="#i-plus"/></svg></summary><p>Python in <b>Google Colab</b>. GPT, <b>Claude</b>, Gemini and Llama through one free API. <b>Claude Code</b> and Cursor for coding. All included in the ₹999.</p></details>
+    <details><summary>Do I need a paid subscription?<svg class="i"><use href="#i-plus"/></svg></summary><p>No. Model access for the class is on us, and the other tools have free versions.</p></details>
+    <details><summary>Do I get a certificate?<svg class="i"><use href="#i-plus"/></svg></summary><p>Yes. Everyone who completes the 3 hours gets a certificate of completion for LinkedIn and your resume.</p></details>
+    <details><summary>Where and when?<svg class="i"><use href="#i-plus"/></svg></summary><p>Saturday 21 November, at a premium co-working space in central Jaipur. We send the exact place and time on WhatsApp.</p></details>
+  </section>
+
+  <footer>Pulkit Verma | AI Masterclass, Jaipur
+    <div class="foot-links"><a href="https://www.linkedin.com/in/pulkitv" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/pulkitxai" target="_blank" rel="noopener">Instagram @pulkitxai</a></div>
+  </footer>
+</div>
+
+<div class="dock">
+  <div class="in">
+    <div class="p"><b>₹999</b><span>Sat 21 Nov | 10 seats</span></div>
+    <a class="cta" data-cta href="#book"><svg class="i"><use href="#i-chat"/></svg>Reserve seat<svg class="i arr"><use href="#i-arrow"/></svg></a>
+  </div>
+</div>
+
+<script>
+  var WHATSAPP_NUMBER = "917906933930";
+  var MESSAGE = "Hi Pulkit, I want a seat in the Jaipur AI Masterclass on 21 Nov (₹999). Please share the details.";
+  var link = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(MESSAGE);
+  document.querySelectorAll("[data-cta]").forEach(function (a) {
+    a.setAttribute("href", link);
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener");
+    a.addEventListener("click", function () { try { if (window.fbq) fbq("track", "Contact"); } catch (e) {} });
+  });
+</script>
+
+</body>
+</html>
